@@ -17,15 +17,17 @@ A real-time collaborative document editor inspired by MS Word, built with Next.j
 ### Setup Instructions
 
 1. **Clone the repository**
-   \`\`\`bash
+
+   ```bash
    git clone repository-url
    cd collaborative-document-editor
-   \`\`\`
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 3. **Set up Supabase**
    - Create a new Supabase project at [supabase.com](https://supabase.com)
@@ -34,20 +36,20 @@ A real-time collaborative document editor inspired by MS Word, built with Next.j
      - Go to Authentication > Settings in your Supabase dashboard
      - Turn OFF "Enable email confirmations"
    - Create a `.env.local` file with your Supabase credentials:
-     \`\`\`
+
      NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
      NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
      SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-     \`\`\`
 
 4. **Set up the database**
    - Run the SQL script in the Supabase SQL editor:
      - Run `scripts/001-initial-schema.sql`
 
 5. **Start the development server**
-   \`\`\`bash
+
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
 6. **Open the application**
    - Navigate to `http://localhost:3000`
@@ -91,19 +93,20 @@ The application uses the following main tables:
 
 Required environment variables:
 
-\`\`\`env
+```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-\`\`\`
+```
 
 ## Deployment
 
 1. **Deploy to Vercel**
-   \`\`\`bash
+
+   ```bash
    npm run build
    vercel --prod
-   \`\`\`
+   ```
 
 2. **Set environment variables** in your Vercel dashboard
 
@@ -115,3 +118,7 @@ SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
